@@ -1,0 +1,21 @@
+@media (min-width: 768px) {
+
+ h2 {
+   padding-left: 100px;
+ }
+
+ .topic-and-author {
+   padding-right: 20px;
+}
+
+.votes-and-comments {
+   display: flex;
+   align-items: space-around;
+}
+
+.title {
+   width: 300px;
+   padding-right: 20px;
+}
+
+    }
