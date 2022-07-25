@@ -1,0 +1,37 @@
+article {
+    padding: 10px;
+}
+
+.topic-and-author {
+    display: flex;
+    justify-content: space-around;
+    color: rgb(60, 60, 60);
+}
+
+.article-body {
+    color: rgb(60, 60, 60);
+}
+
+.votes-and-comments {
+    display: flex;
+    justify-content: space-around;
+}
+
+@media (min-width: 768px) {
+    article {
+      display: flex;
+      padding: 30px;
+    }
+
+    .topic-and-author {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .votes-and-comments {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+  
+    }
