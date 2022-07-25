@@ -1,5 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
+const cors = require("cors");
+
+import logo from "./logo.svg";
+import "./App.css";
+
+app.use(cors());
 
 function App() {
   return (
