@@ -1,14 +1,17 @@
 import "./Filters.css";
 
-import { BrowserRouter, Link, useNavigate } from "react-router-dom";
+import { BrowserRouter, Link, useNavigate, useParams } from "react-router-dom";
 
 import { useEffect, useState } from "react";
 
 import getTopics from "../api-interactions/getTopics";
 
 export default function Filters() {
+  let { topic } = useParams();
+  console.log(topic, "<<topic");
+
   const [topicOptions, setTopicOptions] = useState([]);
-  const [selectedTopic, setSelectedTopic] = useState(undefined);
+  const [selectedTopic, setSelectedTopic] = useState(topic);
 
   let navigate = useNavigate();
 
@@ -16,9 +19,11 @@ export default function Filters() {
     e.preventDefault();
     setSelectedTopic(e.target.value);
 
-    e.target.value === "All"
-      ? navigate(`/articles`)
-      : navigate(`/articles/${e.target.value}`);
+    navigate(`/articles/${e.target.value}`);
+
+    // e.target.value === "All"
+    //   ? navigate(`/articles`)
+    //   : navigate(`/articles/${e.target.value}`);
   };
 
   useEffect(
@@ -29,6 +34,8 @@ export default function Filters() {
     },
     [selectedTopic]
   );
+
+  console.log(selectedTopic, "selectedTopic in filter");
 
   return (
     <div className="filter-box">

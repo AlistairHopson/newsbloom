@@ -47,9 +47,10 @@ export default function ArticleList() {
             return (
               <ArticleCard
                 key={article_id}
-                title={title}
+                article_id={article_id}
                 topic={topic}
-                body={body}
+                title={title}
+                body={body.substring(0, 180)}
                 author={author}
                 votes={votes}
                 comment_count={comment_count}
