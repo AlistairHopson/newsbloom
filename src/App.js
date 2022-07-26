@@ -6,7 +6,8 @@ import Profile from "./components/Profile/Profile";
 import Nav from "./components/Nav/Nav";
 import Filters from "./components/Filters/Filters";
 import ArticleList from "./components/ArticleList/ArticleList";
-
+import ArticleCard from "./components/ArticleCard/ArticleCard";
+import FullArticle from "./components/FullArticle/FullArticle";
 function App() {
   return (
     <BrowserRouter>
@@ -17,6 +18,10 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/articles" element={<ArticleList />} />
           <Route path="/articles/:topic" element={<ArticleList />} />
+          <Route
+            path="/articles/article/:article_id"
+            element={<FullArticle />}
+          />
         </Routes>
       </div>
     </BrowserRouter>

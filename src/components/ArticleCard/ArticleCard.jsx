@@ -1,6 +1,10 @@
 import "./ArticleCard.css";
 
+import { Link } from "react-router-dom";
+
 export default function ArticleCard({
+  article_id,
+  key,
   title,
   topic,
   author,
@@ -12,11 +16,13 @@ export default function ArticleCard({
   return (
     <article>
       <div className="topic-and-author">
-        <p className="topic">{topic.toUpperCase()}</p>
+        <p className="topic">{topic}</p>
         <p className="author">posted by {author}</p>
       </div>
-      <h3 className="title">{title}</h3>
-      <p className="article-body">{body.substring(0, 180)}...</p>
+      <Link to={`/articles/article/${article_id}`} className="article-link">
+        <h3 className="title">{title}</h3>
+        <p className="article-body">{body}...</p>
+      </Link>
       <div className="votes-and-comments">
         <p>votes: {votes}</p>
         <p>comment_count: {comment_count}</p>

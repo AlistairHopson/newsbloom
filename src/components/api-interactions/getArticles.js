@@ -5,7 +5,7 @@ export default function getArticles(props) {
   return axios
     .get("https://newsbloom.herokuapp.com/api/articles", {
       params: {
-        topic: props,
+        topic: props === "All" ? undefined : props,
         // sort_by: sortCategory,
         // order: order,
       },

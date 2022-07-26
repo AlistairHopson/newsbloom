@@ -2,6 +2,10 @@ article {
     padding: 10px;
 }
 
+.article-link {
+    text-decoration: none;
+}
+
 .topic-and-author {
     display: flex;
     justify-content: space-around;
@@ -10,7 +14,6 @@ article {
 
 .title {
     padding-left: 50px;
-
 }
 
 .article-body {
