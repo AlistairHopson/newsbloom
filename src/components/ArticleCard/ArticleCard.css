@@ -8,8 +8,15 @@ article {
     color: rgb(60, 60, 60);
 }
 
+.title {
+    padding-left: 50px;
+
+}
+
 .article-body {
     color: rgb(60, 60, 60);
+    max-width: 50ch;
+    padding-left: 50px;
 }
 
 .votes-and-comments {
