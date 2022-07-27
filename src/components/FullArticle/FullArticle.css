@@ -3,3 +3,10 @@
     text-align: justify;
     max-width: 70ch;
 }
+
+.votes {
+    display: flex;
+    justify-content: space-between;
+
+}
+

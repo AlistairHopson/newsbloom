@@ -6,12 +6,14 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import getArticles from "../api-interactions/getArticles";
 import ArticleCard from "../ArticleCard/ArticleCard";
+import Filters from "../Filters/Filters";
 
 export default function ArticleList() {
   const [articles, setArticles] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   let { topic } = useParams();
+  console.log(topic, "<<topic in article list");
 
   useEffect(() => {
     setIsLoading(true);
@@ -32,6 +34,7 @@ export default function ArticleList() {
 
   return (
     <>
+      {/* <Filters /> */}
       <h2>Articles:</h2>
       <section className="articles">
         {articles.map(

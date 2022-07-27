@@ -1,0 +1,19 @@
+.downvote {
+    background-color: rgb(255, 171, 171);
+    padding: 5px;
+    width: 80px;
+    text-align: center;
+    border-radius: 50%;
+    border-style: groove;
+    border-color: rgba(251, 42, 42, 0.603);
+    }
+    
+    .upvote {
+        background-color: rgb(202, 255, 200);
+        padding: 5px;
+        width: 80px;
+        text-align: center;
+        border-radius: 50%;
+        border-style: groove;
+        border-color: rgba(0, 168, 64, 0.545);
+    }

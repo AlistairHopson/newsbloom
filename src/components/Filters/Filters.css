@@ -1,0 +1,12 @@
+#filter-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque
+}
+
+#filter-title {
+    padding-right: 10px;
+
+
+}
