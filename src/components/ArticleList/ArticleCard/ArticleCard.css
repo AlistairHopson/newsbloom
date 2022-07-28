@@ -24,6 +24,7 @@ article {
     color: rgb(60, 60, 60);
     max-width: 50ch;
     text-align: justify;
+    align-self: center;
 }
 
 .votes-and-comments {

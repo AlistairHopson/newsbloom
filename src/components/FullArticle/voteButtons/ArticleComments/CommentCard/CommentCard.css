@@ -1,0 +1,23 @@
+
+
+.comment {
+    color: rgb(89, 89, 89);
+}
+
+hr {
+    color: rgb(144, 144, 144);
+}
+
+.author-and-created-at {
+    display: flex;
+    justify-content: space-between;
+    color: rgb(115, 115, 115);
+}
+
+.date-and-time {
+    display: flex;
+}
+
+.time {
+padding-left: 6px;
+}
