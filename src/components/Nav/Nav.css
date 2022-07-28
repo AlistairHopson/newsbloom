@@ -1,3 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@700&display=swap');
+
+
+
+.material-icons.md-48 { font-size: 48px; }
+
+a {
+    text-decoration:none;
+    color: rgb(0, 59, 0)
+}
+
+a:visited {
+    text-decoration:none;
+}
+
+
+.homeHeader { 
+
+   font-family: 'Averia Serif Libre', Helvetica, sans-serif;
+   font-size: 35px;
+   color: black;
+}
+
 Nav {
     display: flex;
     justify-content: space-around;

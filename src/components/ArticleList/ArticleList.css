@@ -1,8 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Niramit:wght@700&display=swap');
+
+
+
 @media (min-width: 768px) {
 
  h2 {
    padding-left: 100px;
  }
+
+ p{
+   text-align: justify;
+ }
+
 
  .topic-and-author {
    padding-right: 20px;
@@ -14,7 +23,9 @@
 }
 
 .title {
-   width: 300px;
+   width: 485px;
    padding-right: 20px;
 }
     }
+
+  

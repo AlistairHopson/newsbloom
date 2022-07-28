@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import getArticles from "../api-interactions/getArticles";
 import ArticleCard from "../ArticleCard/ArticleCard";
+import Filters from "../Filters/Filters";
 
 export default function ArticleList() {
   const [articles, setArticles] = useState([]);
@@ -24,6 +25,7 @@ export default function ArticleList() {
   if (isLoading) {
     return (
       <>
+        <Filters />
         <h2>Articles:</h2>
         <div className="loader"></div>
       </>
@@ -32,6 +34,7 @@ export default function ArticleList() {
 
   return (
     <>
+      <Filters />
       <h2>Articles:</h2>
       <section className="articles">
         {articles.map(
