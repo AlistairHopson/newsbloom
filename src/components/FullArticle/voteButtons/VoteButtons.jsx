@@ -8,36 +8,82 @@ export default function VoteButtons({ article }) {
 
   const [additionalClickedVotes, setAdditionalClickedVotes] = useState(0);
 
-  const [enabledButtons, setEnabledButtons] = useState(true);
+  const [downvoted, setDownvoted] = useState();
+  const [upvoted, setUpvoted] = useState();
   const [error, setError] = useState(null);
 
-  function handleButtonClick(voteAdjustment) {
-    setEnabledButtons(false);
-    setAdditionalClickedVotes(voteAdjustment);
-    voteOnArticle(article_id, voteAdjustment).catch((err) => {
-      setError(err.message);
-      return err;
-    });
+  useEffect(() => {
+    if (downvoted) {
+      setAdditionalClickedVotes(-1);
+      voteOnArticle(article_id, -1).catch((err) => {
+        setError(err.message);
+        return err;
+      });
+    }
+    if (downvoted === false) {
+      setAdditionalClickedVotes(0);
+      voteOnArticle(article_id, 1).catch((err) => {
+        setError(err.message);
+        return err;
+      });
+    }
+    if (upvoted) {
+      setAdditionalClickedVotes(1);
+
+      voteOnArticle(article_id, 1).catch((err) => {
+        setError(err.message);
+        return err;
+      });
+    }
+    if (upvoted === false) {
+      setAdditionalClickedVotes(0);
+      voteOnArticle(article_id, -1).catch((err) => {
+        setError(err.message);
+        return err;
+      });
+    }
+  }, [upvoted, downvoted, article_id]);
+
+  function handleDownvote() {
+    downvoted ? setDownvoted(false) : setDownvoted(true);
+    setUpvoted(null);
+  }
+
+  function handleUpvote() {
+    upvoted ? setUpvoted(false) : setUpvoted(true);
+    setDownvoted(null);
   }
 
   return (
-    <div className="votes">
+    <div className="votes-field">
       <button
-        className="downvote"
         onClick={() => {
-          if (enabledButtons) handleButtonClick(-1);
+          if (upvoted) {
+            setUpvoted(false);
+            setDownvoted(null);
+          } else {
+            handleDownvote();
+          }
         }}
+        className={downvoted ? "downvote-selected" : "downvote"}
       >
-        downvote
+        <span className="material-icons md-24">thumb_down_alt</span>
       </button>
-      <p>{error ? error : `${votes + additionalClickedVotes} votes`} </p>
+      <p className="vote-count-and-errors">
+        {error ? error : `${votes + additionalClickedVotes} votes`}{" "}
+      </p>
       <button
-        className="upvote"
         onClick={() => {
-          if (enabledButtons) handleButtonClick(1);
+          if (downvoted) {
+            setDownvoted(false);
+            setUpvoted(null);
+          } else {
+            handleUpvote();
+          }
         }}
+        className={upvoted ? "upvote-selected" : "upvote"}
       >
-        upvote
+        <span className="material-icons md-24">thumb_up_alt</span>
       </button>
       <br />
     </div>

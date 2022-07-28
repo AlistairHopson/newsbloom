@@ -1,19 +1,65 @@
+button {
+    cursor:'pointer' 
+}
+
+.votes-field {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 .downvote {
-    background-color: rgb(255, 171, 171);
     padding: 5px;
-    width: 80px;
     text-align: center;
-    border-radius: 50%;
-    border-style: groove;
-    border-color: rgba(251, 42, 42, 0.603);
+    opacity: 0.4;
+    border: none;
+    background: none;
+    display: flex;
+    padding-top: 10px;
+    align-self: center;
     }
     
-    .upvote {
-        background-color: rgb(202, 255, 200);
-        padding: 5px;
-        width: 80px;
-        text-align: center;
-        border-radius: 50%;
-        border-style: groove;
-        border-color: rgba(0, 168, 64, 0.545);
+    .downvote:hover {
+        color: red;
     }
+
+.downvote-selected {
+    padding: 5px;
+    text-align: center;
+    opacity: 0.4;
+    border: none;
+    background: none;
+    display: flex;
+    padding-top: 10px;
+    align-self: center;
+    color: red;
+}
+
+
+.upvote {
+        padding: 5px;
+        text-align: center;
+        opacity: 0.4;
+        border: none;
+        background: none;
+        display: flex;
+
+        align-self: center;    
+    }
+    
+    .upvote:hover {
+        color: green;
+    }
+
+    .upvote-selected {
+        padding: 5px;
+        text-align: center;
+        opacity: 0.4;
+        border: none;
+        background: none;
+        display: flex;
+        align-self: center;
+        color: green;
+    }
+    
+

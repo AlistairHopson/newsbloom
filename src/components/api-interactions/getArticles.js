@@ -5,8 +5,6 @@ export default function getArticles(props) {
     .get("https://newsbloom.herokuapp.com/api/articles", {
       params: {
         topic: props === "All" ? undefined : props,
-        // sort_by: sortCategory,
-        // order: order,
       },
     })
     .then((res) => {

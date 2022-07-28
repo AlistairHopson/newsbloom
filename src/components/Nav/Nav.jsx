@@ -1,18 +1,18 @@
 import "./Nav.css";
 
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Nav() {
   return (
     <nav>
       <header>
-        <Link to="/articles">
-          <h1>Newsbloom</h1>
-        </Link>
+        <NavLink to="/articles">
+          <h1 className="homeHeader">Newsbloom</h1>
+        </NavLink>
       </header>
-      <Link to="/profile">
-        <h2>Profile</h2>
-      </Link>
+      <NavLink to="/profile">
+        <span className="material-icons md-48">account_circle</span>
+      </NavLink>
     </nav>
   );
 }

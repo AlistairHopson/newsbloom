@@ -13,7 +13,6 @@ export default function ArticleList() {
   const [isLoading, setIsLoading] = useState(true);
 
   let { topic } = useParams();
-  console.log(topic, "<<topic in article list");
 
   useEffect(() => {
     setIsLoading(true);
@@ -26,6 +25,7 @@ export default function ArticleList() {
   if (isLoading) {
     return (
       <>
+        <Filters />
         <h2>Articles:</h2>
         <div className="loader"></div>
       </>
@@ -34,7 +34,7 @@ export default function ArticleList() {
 
   return (
     <>
-      {/* <Filters /> */}
+      <Filters />
       <h2>Articles:</h2>
       <section className="articles">
         {articles.map(

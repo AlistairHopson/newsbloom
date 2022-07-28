@@ -2,7 +2,6 @@ import "./FullArticle.css";
 
 import { useParams } from "react-router-dom";
 
-import ArticleCard from "../ArticleCard/ArticleCard";
 import getArticleById from "../api-interactions/getArticleById";
 import VoteButtons from "./voteButtons/VoteButtons";
 
@@ -21,13 +20,13 @@ export default function FullArticle() {
 
   return (
     <div className="article">
-      <h1>{article.title}</h1>
+      <h1 className="article-title">{article.title}</h1>
       <p>by {article.author}</p>
       <p>{article.body}</p>
-
-      <VoteButtons article={article} />
-
-      <p>{article.comment_count} comments</p>
+      <div className="votes-and-comments">
+        <VoteButtons article={article} />
+        <p>{article.comment_count} comments</p>
+      </div>
     </div>
   );
 }

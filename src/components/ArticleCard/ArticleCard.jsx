@@ -4,11 +4,9 @@ import { Link } from "react-router-dom";
 
 export default function ArticleCard({
   article_id,
-  key,
   title,
   topic,
   author,
-  created_at,
   votes,
   comment_count,
   body,

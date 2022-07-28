@@ -4,6 +4,10 @@ article {
 
 .article-link {
     text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
 }
 
 .topic-and-author {
@@ -13,19 +17,21 @@ article {
 }
 
 .title {
-    padding-left: 50px;
+    text-align: center;
 }
 
 .article-body {
     color: rgb(60, 60, 60);
     max-width: 50ch;
-    padding-left: 50px;
+    text-align: justify;
 }
 
 .votes-and-comments {
     display: flex;
     justify-content: space-around;
 }
+
+
 
 @media (min-width: 768px) {
     article {
@@ -43,5 +49,17 @@ article {
         flex-direction: column;
         padding: 20px;
     }
-  
+
+    .title {
+        text-align: left;
     }
+
+    .article-link {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        padding-left: 20px;
+    }
+  
+}

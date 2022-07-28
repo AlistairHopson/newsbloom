@@ -1,6 +1,6 @@
 import "./Filters.css";
 
-import { BrowserRouter, Link, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 import { useEffect, useState } from "react";
 
@@ -19,10 +19,6 @@ export default function Filters() {
     setSelectedTopic(e.target.value);
 
     navigate(`/articles/${e.target.value}`);
-
-    // e.target.value === "All"
-    //   ? navigate(`/articles`)
-    //   : navigate(`/articles/${e.target.value}`);
   };
 
   useEffect(
@@ -38,11 +34,7 @@ export default function Filters() {
     <div id="filter-box">
       <h3 id="filter-title">Filter:</h3>
       <label>
-        <select
-          defaultValue={selectedTopic}
-          value={selectedTopic}
-          onChange={handleChange}
-        >
+        <select value={selectedTopic} onChange={handleChange}>
           <option key="all" value="All">
             Choose a topic
           </option>
