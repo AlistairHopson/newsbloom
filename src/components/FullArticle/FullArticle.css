@@ -7,6 +7,7 @@
     max-width: 70ch;
 }
 
+
 .votes {
     display: flex;
     justify-content: space-between;
@@ -19,6 +20,50 @@
     font-weight: 100px;
     max-width: 70ch;
 }
+
+.comments {
+    display: flex;
+    align-items: center;
+}
+
+.comment-count {
+    padding-right: 6px;
+}
+
+.toggled-comments {
+    padding: 5px;
+    text-align: center;
+    opacity: 1;
+    border: none;
+    background: none;
+    display: flex;
+    padding-top: 10px;
+    align-self: center;
+}
+
+.toggled-comments:active {
+    transform: translateY(-3px) ;
+  }
+
+  .untoggled-comments {
+
+    padding: 5px;
+    text-align: center;
+    opacity: 0.42;
+    border: none;
+    background: none;
+    display: flex;
+    padding-top: 10px;
+    align-self: center;
+}
+
+    .untoggled-comments:hover {
+        opacity: 1;
+    }
+
+.untoggled-comments:active {
+    transform: translateY(-3px) ;
+  }
 
 
 @media (min-width: 768px) {

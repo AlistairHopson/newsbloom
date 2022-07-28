@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 
 import { useEffect, useState } from "react";
 import getArticles from "../api-interactions/getArticles";
-import ArticleCard from "../ArticleCard/ArticleCard";
+import ArticleCard from "./ArticleCard/ArticleCard";
 import Filters from "../Filters/Filters";
 
 export default function ArticleList() {
