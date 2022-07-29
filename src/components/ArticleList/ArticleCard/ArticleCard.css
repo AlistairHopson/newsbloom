@@ -16,8 +16,21 @@ article {
     color: rgb(60, 60, 60);
 }
 
+
+
+.topic{
+
+    color: rgb(57, 57, 57);
+    width: 80px;
+                height: 25px;
+                border-radius: 20px;
+                font-weight:bold;
+                padding-top: 3px;
+            }
+
 .title {
     text-align: center;
+    color: rgba(0, 48, 0, 0.855)
 }
 
 .article-body {

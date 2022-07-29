@@ -1,0 +1,73 @@
+
+form {
+    display: flex;
+    align-content: flex-start;
+}
+
+.post-comment-box {
+    display: flex;
+    justify-content: center;
+}
+
+.comment-input-box {
+    padding-right: 30px;
+    width: auto;
+    text-align: justify;
+    text-justify:inter-word;
+    
+}
+
+
+textarea:focus {
+    background-color: rgba(57, 200, 57, 0.159)
+    ;
+
+ 
+}
+
+.submit-comment-button{
+    margin-left: 10px;
+    height: 40px;
+}
+
+.submit-comment-button:hover {
+    background-color:rgba(57, 200, 57, 0.418)
+
+}
+
+.draft-comment {
+background-color: rgba(255, 228, 196, 0.603);
+padding: 10px;
+border: 3px dashed rgba(0, 0, 0, 0.483);
+}
+
+    .draft-comment-failed {
+    background-color: rgba(183, 22, 4, 0.454);
+    padding: 10px;
+    border: 3px dashed rgba(0, 0, 0, 0.483);
+    }
+
+    .draft-comment-successful {
+    background-color: rgba(1, 175, 4, 0.32);
+    padding: 10px;
+    border: 3px dashed rgba(0, 0, 0, 0.483);
+    
+    }
+
+.log-in-link{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color:rgba(183, 22, 4, 0.603);
+    /* width: 40%px; */
+    margin-left: 20px;
+    margin-right: 20px;
+
+    height: 25px;
+    border: 3px ridge rgba(0, 0, 0, 0.483);
+
+    border-radius: 20px;
+    font-weight: bold;
+    padding-top: 3px;
+    color: black;
+}

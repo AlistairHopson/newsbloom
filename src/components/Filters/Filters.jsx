@@ -30,6 +30,10 @@ export default function Filters() {
     [selectedTopic]
   );
 
+  useEffect(() => {
+    setSelectedTopic(topic);
+  }, [topic]);
+
   return (
     <div id="filter-box">
       <h3 id="filter-title">Filter:</h3>

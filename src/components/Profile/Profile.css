@@ -1,0 +1,43 @@
+button {
+cursor: pointer;}
+
+u {
+    text-decoration:dashed;
+  }
+
+
+
+.accounts {
+    display: flex;
+    flex-direction: column;
+}
+
+.account-details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black
+
+}
+
+.styled-profile {
+    width: 20%;
+    border: 5px dotted #555;
+    margin-right: 15px;
+
+}
+
+.log-out {
+    background-color: rgba(139, 0, 0, 0.533);
+    width: 80px;
+                height: 25px;
+                border-radius: 20px;
+                margin-top: 20px;
+                font-weight: bold;
+            }
+
+.log-out:hover {
+    background-color: rgba(139, 0, 0, 0.846);
+    color: aliceblue;
+
+}
