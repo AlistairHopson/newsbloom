@@ -11,10 +11,20 @@ export default function ArticleCard({
   comment_count,
   body,
 }) {
+  const t = topic;
+
+  const background = `rgba(1${t.charCodeAt(4)}, 194, 1${
+    t.charCodeAt(6) ? t.charCodeAt(6) : t.charCodeAt(0)
+  }, 0.533)`;
+
   return (
     <article>
       <div className="topic-and-author">
-        <p className="topic">{topic}</p>
+        <Link to={`/articles/${topic}`}>
+          <p style={{ background }} className="topic">
+            {topic}
+          </p>
+        </Link>
         <p className="author">posted by {author}</p>
       </div>
       <Link to={`/articles/article/${article_id}`} className="article-link">

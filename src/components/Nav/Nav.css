@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@700&display=swap');
 
+nav {
+    background-color: rgba(227, 227, 227, 0.641)
+}
+
+.material-icons.md-48 { font-size: 48px;
 
 
-.material-icons.md-48 { font-size: 48px; }
+}
 
 a {
     text-decoration:none;
-    color: rgb(0, 59, 0)
+    color: rgba(0, 59, 0, 0.659)
 }
 
 a:visited {
@@ -19,10 +24,16 @@ a:visited {
    font-family: 'Averia Serif Libre', Helvetica, sans-serif;
    font-size: 35px;
    color: black;
+   padding-left: 20px;
+   text-decoration:overline underline rgb(7, 83, 2) 5px;
+   text-underline-offset: 4px;
+
 }
 
 Nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+  
+    padding-right: 20px;
 }

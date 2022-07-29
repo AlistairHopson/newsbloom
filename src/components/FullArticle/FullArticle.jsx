@@ -4,8 +4,9 @@ import { useParams } from "react-router-dom";
 
 import getArticleById from "../api-interactions/getArticleById";
 import getArticleComments from "../api-interactions/getArticleComments";
-import VoteButtons from "./voteButtons/VoteButtons";
-import CommentCard from "./voteButtons/ArticleComments/CommentCard/CommentCard";
+import VoteButtons from "./VoteButtons/VoteButtons";
+import CommentCard from "./VoteButtons/ArticleComments/CommentCard/CommentCard";
+import PostCommentForm from "./PostCommentForm/PostCommentForm";
 import { useEffect, useState } from "react";
 import "./CentralLoader.css";
 
@@ -47,6 +48,7 @@ export default function FullArticle() {
       <p>{article.body}</p>
       <div className="votes-and-comments">
         <VoteButtons article={article} />
+
         <div className="comments">
           <p className="comment-count">{article.comment_count} </p>
           <button
@@ -61,6 +63,8 @@ export default function FullArticle() {
           </button>
         </div>
       </div>
+      <hr />
+      <PostCommentForm article={article} />
 
       {comments.map(({ author, body, created_at, votes, comment_id }) => {
         if (toggledComments)
