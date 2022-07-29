@@ -2,6 +2,8 @@ import "./FullArticle.css";
 
 import { useParams } from "react-router-dom";
 
+import { Fragment } from "react";
+
 import getArticleById from "../api-interactions/getArticleById";
 import getArticleComments from "../api-interactions/getArticleComments";
 import VoteButtons from "./VoteButtons/VoteButtons";
@@ -69,7 +71,7 @@ export default function FullArticle() {
       {comments.map(({ author, body, created_at, votes, comment_id }) => {
         if (toggledComments)
           return (
-            <>
+            <Fragment key={comment_id}>
               <hr />
               <CommentCard
                 key={comment_id}
@@ -79,7 +81,7 @@ export default function FullArticle() {
                 votes={votes}
               />
               <hr />
-            </>
+            </Fragment>
           );
       })}
     </div>
