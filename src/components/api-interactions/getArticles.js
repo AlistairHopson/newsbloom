@@ -1,10 +1,12 @@
 import axios from "axios";
 
-export default function getArticles(props) {
+export default function getArticles(topic, sort_by, order) {
   return axios
     .get("https://newsbloom.herokuapp.com/api/articles", {
       params: {
-        topic: props === "All" ? undefined : props,
+        topic: topic === "All" ? undefined : topic,
+        sort_by: sort_by === "date" ? undefined : sort_by,
+        order: order,
       },
     })
     .then((res) => {

@@ -7,7 +7,7 @@ import getArticleComments from "../api-interactions/getArticleComments";
 import VoteButtons from "./VoteButtons/VoteButtons";
 import CommentCard from "./VoteButtons/ArticleComments/CommentCard/CommentCard";
 import PostCommentForm from "./PostCommentForm/PostCommentForm";
-import { useEffect, useState } from "react";
+import { useEffect, useState, Fragment } from "react";
 import "./CentralLoader.css";
 
 export default function FullArticle() {
@@ -20,16 +20,16 @@ export default function FullArticle() {
   const [toggledComments, setToggledComments] = useState(true);
 
   useEffect(() => {
+    setIsLoading(true);
     getArticleById(article_id).then(({ article }) => {
       setArticle(article);
+      setIsLoading(false);
     });
   }, [article_id]);
 
   useEffect(() => {
-    setIsLoading(true);
     getArticleComments(article_id).then(({ comments }) => {
       setComments(comments);
-      setIsLoading(false);
     });
   }, [article_id]);
 
@@ -44,7 +44,13 @@ export default function FullArticle() {
   return (
     <div className="article">
       <h1 className="article-title">{article.title}</h1>
-      <p>by {article.author}</p>
+      <div className="author-and-created-at">
+        <p>by {article.author}</p>
+        <div className="date-and-time">
+          <p>{article.created_at.match(/^[0-9-]+/)}</p>
+          <p className="time">{article.created_at.match(/(?<=T)[0-9:]+/)}</p>
+        </div>
+      </div>
       <p>{article.body}</p>
       <div className="votes-and-comments">
         <VoteButtons article={article} />
@@ -69,7 +75,7 @@ export default function FullArticle() {
       {comments.map(({ author, body, created_at, votes, comment_id }) => {
         if (toggledComments)
           return (
-            <>
+            <Fragment key={comment_id}>
               <hr />
               <CommentCard
                 key={comment_id}
@@ -79,7 +85,7 @@ export default function FullArticle() {
                 votes={votes}
               />
               <hr />
-            </>
+            </Fragment>
           );
       })}
     </div>

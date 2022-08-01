@@ -26,6 +26,13 @@ button {
     max-width: 70ch;
 }
 
+.author-and-created-at {
+    display: flex;
+    justify-content: space-between;
+    color: rgb(115, 115, 115);
+}
+
+
 .comments {
     display: flex;
     align-items: center;

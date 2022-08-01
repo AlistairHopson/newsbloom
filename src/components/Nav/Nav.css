@@ -5,8 +5,7 @@ nav {
 }
 
 .material-icons.md-48 { font-size: 48px;
-
-
+    position: static
 }
 
 a {

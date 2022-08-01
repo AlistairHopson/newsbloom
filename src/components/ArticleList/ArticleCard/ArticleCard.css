@@ -77,3 +77,15 @@ article {
     }
   
 }
+
+.timestamp {
+    display: flex;
+    justify-content: center;
+    color:rgba(90, 90, 90, 0.54)
+}
+
+.time{
+
+    margin-left: 20px;
+}
+

@@ -28,7 +28,6 @@ export default function PostCommentForm({ article }) {
           if (res) setPostSuccessful(true);
         })
         .catch((err) => {
-          console.log(err, "errmessage in postcommentform");
           setError(err.message);
           return err;
         });
