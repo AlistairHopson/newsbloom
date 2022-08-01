@@ -1,7 +1,7 @@
 import "./ArticleList.css";
 import "./ArticlesLoader.css";
 
-import { useParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
 
 import { useEffect, useState } from "react";
 import getArticles from "../api-interactions/getArticles";
@@ -13,14 +13,21 @@ export default function ArticleList() {
   const [isLoading, setIsLoading] = useState(true);
 
   let { topic } = useParams();
+  const [searchParams] = useSearchParams();
+
+  let sort_by =
+    searchParams.get("sort_by") === null ? "date" : searchParams.get("sort_by");
+
+  let order =
+    searchParams.get("order") === null ? "desc" : searchParams.get("order");
 
   useEffect(() => {
     setIsLoading(true);
-    getArticles(topic).then(({ articles }) => {
+    getArticles(topic, sort_by, order).then(({ articles }) => {
       setArticles(articles);
       setIsLoading(false);
     });
-  }, [topic]);
+  }, [topic, sort_by, order]);
 
   if (isLoading) {
     return (
@@ -46,6 +53,8 @@ export default function ArticleList() {
             votes,
             comment_count,
             article_id,
+            date,
+            created_at,
           }) => {
             return (
               <ArticleCard
@@ -57,6 +66,8 @@ export default function ArticleList() {
                 author={author}
                 votes={votes}
                 comment_count={comment_count}
+                date={date}
+                created_at={created_at}
               />
             );
           }

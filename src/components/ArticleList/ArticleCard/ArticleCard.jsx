@@ -10,6 +10,7 @@ export default function ArticleCard({
   votes,
   comment_count,
   body,
+  created_at,
 }) {
   const t = topic;
 
@@ -34,6 +35,10 @@ export default function ArticleCard({
       <div className="votes-and-comments">
         <p>votes: {votes}</p>
         <p>comment_count: {comment_count}</p>
+      </div>
+      <div className="timestamp">
+        <p>{created_at.match(/^[0-9-]+/)}</p>
+        <p className="time">{created_at.match(/(?<=T)[0-9:]+/)}</p>
       </div>
       <hr className="break" />
     </article>
