@@ -1,4 +1,76 @@
+button {
+    cursor:'pointer' 
+}
+.start-deleted-comment {
+    background-color: rgba(246, 12, 12, 0.193);
+}
 
+.delete-comment-finished {
+    background-color: rgba(2, 192, 2, 0.316);
+}
+
+.strikethrough {
+    text-decoration: line-through;
+    font-style: italic;
+    color: rgba(138, 138, 138, 0.365);
+
+  }
+
+.delete-button {
+    opacity: 0.4;
+    border: none;
+    background: none;
+    display: flex;
+    padding-top: 10px;
+    align-self: center;
+    padding-bottom: 10px;
+}
+
+.pressed-delete-button{
+    opacity: 0.7;
+    border: none;
+    background: none;
+    display: flex;
+    padding-top: 10px;
+    align-self: center;
+    padding-bottom: 10px;
+    color: red;
+    
+    
+}
+
+.delete-button:hover {
+    color: red;
+}
+
+.confirm-delete-message {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 30px;
+    margin-right: 30px;
+
+}
+
+.confirm-delete {
+    font-size: 17px;;
+    border: none;
+    background: none;
+    display: flex;
+    padding-top: 5px;
+    align-self: center;
+    padding-bottom: 10px;
+}
+
+.cancel-delete {
+    font-size: 17px;;
+    border: none;
+    background: none;
+    display: flex;
+    padding-top: 5px;
+    align-self: center;
+    padding-bottom: 10px;
+}
 
 .comment {
     color: rgb(89, 89, 89);
@@ -11,7 +83,7 @@ hr {
 .author-and-created-at {
     display: flex;
     justify-content: space-between;
-    color: rgb(115, 115, 115);
+    color: rgba(173, 173, 173, 0.652);
 }
 
 .date-and-time {
@@ -20,4 +92,16 @@ hr {
 
 .time {
 padding-left: 6px;
+}
+
+.votes-and-delete {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.deleted-message {
+    
+    display: flex;
+    justify-content: center;
 }

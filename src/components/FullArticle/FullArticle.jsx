@@ -2,7 +2,8 @@ import "./FullArticle.css";
 
 import { useParams } from "react-router-dom";
 
-import { Fragment } from "react";
+import { useContext } from "react";
+import { AccountContext } from "../AccountContext";
 
 import getArticleById from "../api-interactions/getArticleById";
 import getArticleComments from "../api-interactions/getArticleComments";
@@ -20,6 +21,8 @@ export default function FullArticle() {
   const [article, setArticle] = useState([]);
   const [comments, setComments] = useState([]);
   const [toggledComments, setToggledComments] = useState(true);
+
+  const { username } = useContext(AccountContext);
 
   useEffect(() => {
     setIsLoading(true);
@@ -81,10 +84,12 @@ export default function FullArticle() {
               <hr />
               <CommentCard
                 key={comment_id}
+                comment_id={comment_id}
                 author={author}
                 body={body}
                 created_at={created_at}
                 votes={votes}
+                username={username}
               />
               <hr />
             </Fragment>
