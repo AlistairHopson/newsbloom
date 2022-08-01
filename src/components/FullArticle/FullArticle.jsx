@@ -7,7 +7,7 @@ import { AccountContext } from "../AccountContext";
 
 import getArticleById from "../api-interactions/getArticleById";
 import getArticleComments from "../api-interactions/getArticleComments";
-import VoteButtons from "./VoteButtons/VoteButtons";
+import VoteButtons from "./VoteButtons/VoteButtons.jsx";
 import CommentCard from "./VoteButtons/ArticleComments/CommentCard/CommentCard";
 import PostCommentForm from "./PostCommentForm/PostCommentForm";
 import { useEffect, useState, Fragment } from "react";
