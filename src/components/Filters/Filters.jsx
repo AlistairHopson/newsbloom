@@ -67,13 +67,6 @@ export default function Filters() {
     setSelectedTopic(topic);
   }, [topic]);
 
-  useEffect(() => {
-    setSelectedSortMethod(sort_by);
-  }, [sort_by]);
-
-  useEffect(() => {
-    setSelectedOrderMethod(order);
-  }, [order]);
 
   return (
     <div id="filter-box">

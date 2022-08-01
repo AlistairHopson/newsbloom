@@ -2,6 +2,8 @@ import "./FullArticle.css";
 
 import { useParams } from "react-router-dom";
 
+import { Fragment } from "react";
+
 import getArticleById from "../api-interactions/getArticleById";
 import getArticleComments from "../api-interactions/getArticleComments";
 import VoteButtons from "./VoteButtons/VoteButtons";
