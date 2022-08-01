@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { AccountContext } from "../../AccountContext";
 import { Link } from "react-router-dom";
 
-import CommentCard from "../VoteButtons/ArticleComments/CommentCard/CommentCard";
+import CommentCard from "../VotingButtons/ArticleComments/CommentCard/CommentCard";
 import { useState } from "react";
 import postComment from "../../api-interactions/postComment";
 
