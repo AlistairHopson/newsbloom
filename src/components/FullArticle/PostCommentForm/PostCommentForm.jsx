@@ -16,6 +16,7 @@ export default function PostCommentForm({ article }) {
   const [comment, setComment] = useState(null);
   const [error, setError] = useState(null);
   const [postSuccessful, setPostSuccessful] = useState(false);
+  const [temporaryCommentID, setTemporaryCommentID] = useState(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -25,6 +26,7 @@ export default function PostCommentForm({ article }) {
     } else {
       postComment(article_id, username[0].username, comment)
         .then((res) => {
+          setTemporaryCommentID(res.comment.comment_id);
           if (res) setPostSuccessful(true);
         })
         .catch((err) => {
@@ -37,6 +39,7 @@ export default function PostCommentForm({ article }) {
     return (
       <CommentCard
         id="temporary-comment"
+        comment_id={temporaryCommentID}
         key={postSuccessful ? comment : null}
         author={username[0].username}
         body={comment}

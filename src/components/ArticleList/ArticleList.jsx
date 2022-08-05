@@ -1,7 +1,7 @@
 import "./ArticleList.css";
 import "./ArticlesLoader.css";
 
-import { useParams, useSearchParams } from "react-router-dom";
+import { Link, useParams, useSearchParams } from "react-router-dom";
 
 import { useEffect, useState } from "react";
 import getArticles from "../api-interactions/getArticles";
@@ -11,6 +11,7 @@ import Filters from "../Filters/Filters";
 export default function ArticleList() {
   const [articles, setArticles] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   let { topic } = useParams();
   const [searchParams] = useSearchParams();
@@ -22,11 +23,17 @@ export default function ArticleList() {
     searchParams.get("order") === null ? "desc" : searchParams.get("order");
 
   useEffect(() => {
+    setError(null);
     setIsLoading(true);
-    getArticles(topic, sort_by, order).then(({ articles }) => {
-      setArticles(articles);
-      setIsLoading(false);
-    });
+    getArticles(topic, sort_by, order)
+      .then(({ articles }) => {
+        setArticles(articles);
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        setError(err.message);
+        setIsLoading(false);
+      });
   }, [topic, sort_by, order]);
 
   if (isLoading) {
@@ -36,6 +43,19 @@ export default function ArticleList() {
         <h2>Articles:</h2>
         <div className="loader"></div>
       </>
+    );
+  }
+
+  if (error) {
+    return (
+      <div>
+        <p>{error}</p>
+        <p>Sorry, the page you requested does not exist.</p>
+        <Link to={"/"} className="go-home">
+          <h3>Go home</h3>
+          <span className="material-icons md-48">u_turn_left</span>
+        </Link>
+      </div>
     );
   }
 

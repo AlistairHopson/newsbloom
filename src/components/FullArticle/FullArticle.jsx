@@ -1,6 +1,6 @@
 import "./FullArticle.css";
 
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import { useContext } from "react";
 import { AccountContext } from "../AccountContext";
@@ -17,6 +17,7 @@ export default function FullArticle() {
   let { article_id } = useParams();
 
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   const [article, setArticle] = useState([]);
   const [comments, setComments] = useState([]);
@@ -26,10 +27,14 @@ export default function FullArticle() {
 
   useEffect(() => {
     setIsLoading(true);
-    getArticleById(article_id).then(({ article }) => {
-      setArticle(article);
-      setIsLoading(false);
-    });
+    getArticleById(article_id)
+      .then(({ article }) => {
+        setArticle(article);
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        setError(err.message);
+      });
   }, [article_id]);
 
   useEffect(() => {
@@ -37,6 +42,22 @@ export default function FullArticle() {
       setComments(comments);
     });
   }, [article_id]);
+
+  if (error) {
+    return (
+      <div>
+        <p>{error}</p>
+        <p>
+          Sorry, we can’t find any articles with an ID of
+          <em>{article_id}</em>
+        </p>
+        <Link to={"/articles"} className="go-home">
+          <h3>Go home</h3>
+          <span className="material-icons md-48">u_turn_left</span>
+        </Link>
+      </div>
+    );
+  }
 
   if (isLoading) {
     return (
