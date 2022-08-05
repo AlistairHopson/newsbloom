@@ -1,6 +1,6 @@
 import "./App.css";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import { AccountContext } from "./components/AccountContext";
 import { useState } from "react";
@@ -9,6 +9,8 @@ import Profile from "./components/Profile/Profile";
 import Nav from "./components/Nav/Nav";
 import ArticleList from "./components/ArticleList/ArticleList";
 import FullArticle from "./components/FullArticle/FullArticle";
+import GeneralErrorPath from "./components/GeneralErrorPath/GeneralErrorPath";
+
 function App() {
   const [account, setAccount] = useState({
     username: "cooljmessy",
@@ -31,6 +33,7 @@ function App() {
               path="/articles/article/:article_id"
               element={<FullArticle />}
             />
+            <Route path="*" element={<GeneralErrorPath />} />
           </Routes>
         </div>
       </AccountContext.Provider>

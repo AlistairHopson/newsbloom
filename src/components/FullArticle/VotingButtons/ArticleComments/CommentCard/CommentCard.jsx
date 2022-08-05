@@ -1,7 +1,8 @@
 import "./CommentCard.css";
-import { useState } from "react";
+import { useState, useContext } from "react";
 
 import deleteComment from "../../../../api-interactions/deleteComment";
+import { AccountContext } from "../../../../AccountContext";
 
 export default function CommentCard({
   comment_id,
@@ -9,11 +10,13 @@ export default function CommentCard({
   body,
   created_at,
   votes,
-  username,
 }) {
   const [startDelete, setStartDelete] = useState(false);
   const [commentDeleted, setCommentDeleted] = useState(false);
   const [error, setError] = useState(null);
+
+  const { username } = useContext(AccountContext);
+  const [account, setAccount] = username;
 
   function handleDelete() {
     deleteComment(comment_id)
