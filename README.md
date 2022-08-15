@@ -1,6 +1,7 @@
 # Newsbloom
 
 View Newsbloom: https://newsbloom.netlify.app
+(Chrome recommended)
 
 ## Overview
 
