@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Niramit:wght@700&display=swap');
 
-
+.no-resource-error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
 @media (min-width: 768px) {
 
@@ -27,4 +33,3 @@
 }
     }
 
-  
