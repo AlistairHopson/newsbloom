@@ -5,6 +5,16 @@ u {
     text-decoration:dashed;
   }
 
+.account-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    text-align: center;
+}
+
 
 
 .accounts {
@@ -21,19 +31,22 @@ u {
 }
 
 .styled-profile {
-    width: 20%;
+    width: 150px;
     border: 5px dotted #555;
     margin-right: 15px;
 
 }
 
 .log-out {
+    display: flex;
+    justify-content: center;
     background-color: rgba(139, 0, 0, 0.533);
     width: 80px;
                 height: 25px;
                 border-radius: 20px;
                 margin-top: 20px;
                 font-weight: bold;
+
             }
 
 .log-out:hover {
