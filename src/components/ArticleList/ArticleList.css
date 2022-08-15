@@ -9,6 +9,8 @@
 }
 
 @media (min-width: 768px) {
+ 
+
 
  h2 {
    padding-left: 100px;
@@ -31,5 +33,12 @@
    width: 485px;
    padding-right: 20px;
 }
+
+.filters {
+  display: flex
+}
+
     }
+
+
 

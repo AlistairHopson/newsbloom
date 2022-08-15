@@ -29,3 +29,12 @@
     margin-left: 5px;
     margin-right: 5px;
 }
+
+
+@media (min-width: 768px) {
+ #filter-box {
+    justify-content: flex-start;
+    padding-left: 20px
+ }
+
+}

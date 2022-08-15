@@ -60,7 +60,7 @@ export default function ArticleList() {
   }
 
   return (
-    <>
+    <div className="article-list">
       <Filters />
       <h2>Articles:</h2>
       <section className="articles">
@@ -93,6 +93,6 @@ export default function ArticleList() {
           }
         )}
       </section>
-    </>
+    </div>
   );
 }
