@@ -1,7 +1,7 @@
 # Newsbloom
 
 View Newsbloom: https://newsbloom.netlify.app
-(Chrome recommended)
+(Chrome recommended. You can view Newsbloom's mobile-first design by using Chrome DevTools)
 
 ## Overview
 
