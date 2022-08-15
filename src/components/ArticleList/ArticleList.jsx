@@ -48,7 +48,7 @@ export default function ArticleList() {
 
   if (error) {
     return (
-      <div>
+      <div className="no-resource-error">
         <p>{error}</p>
         <p>Sorry, the page you requested does not exist.</p>
         <Link to={"/"} className="go-home">

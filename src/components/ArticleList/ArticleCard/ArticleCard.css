@@ -2,6 +2,7 @@ article {
     padding: 10px;
 }
 
+
 .article-link {
     text-decoration: none;
     display: flex;
@@ -19,13 +20,13 @@ article {
 
 
 .topic{
-
     color: rgb(57, 57, 57);
     width: 80px;
                 height: 25px;
                 border-radius: 20px;
                 font-weight:bold;
                 padding-top: 3px;
+                text-align: center;
             }
 
 .title {
@@ -50,7 +51,12 @@ article {
 @media (min-width: 768px) {
     article {
       display: flex;
+      flex-direction: column;
       padding: 30px;
+    }
+
+    .article-container {
+        display: flex;
     }
 
     .topic-and-author {

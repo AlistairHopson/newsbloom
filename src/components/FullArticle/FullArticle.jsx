@@ -45,11 +45,11 @@ export default function FullArticle() {
 
   if (error) {
     return (
-      <div>
+      <div className="no-ID-found">
         <p>{error}</p>
         <p>
           Sorry, we can’t find any articles with an ID of
-          <em>{article_id}</em>
+          <em> {article_id}</em>
         </p>
         <Link to={"/articles"} className="go-home">
           <h3>Go home</h3>
