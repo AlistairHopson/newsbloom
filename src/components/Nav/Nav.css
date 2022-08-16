@@ -44,7 +44,7 @@ Nav .container {
 @media(min-width: 1200px) {
     .container {
         width: 1024px;
-    }
+        }
 
     nav {
         display: flex;

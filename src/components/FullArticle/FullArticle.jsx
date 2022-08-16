@@ -76,11 +76,13 @@ export default function FullArticle() {
         <p>by {article.author}</p>
         <div className="date-and-time">
           <p>{article.created_at.match(/^[0-9-]+/)}</p>
-          <p className="time">{article.created_at.match(/(?<=T)[0-9:]+/)}</p>
+          <p className="time">
+            {article.created_at.match(/[0-9]{2}:[0-9]{2}/)}
+          </p>
         </div>
       </div>
       <p>{article.body}</p>
-      <div className="votes-and-comments">
+      <div className="votes-and-comments wide">
         <VoteButtons article={article} />
 
         <div className="comments">

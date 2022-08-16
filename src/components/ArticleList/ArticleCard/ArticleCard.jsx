@@ -27,13 +27,13 @@ export default function ArticleCard({
               {topic}
             </p>
           </Link>
-          <p className="author">posted by {author}</p>
+          <p className="author">by {author}</p>
         </div>
         <Link to={`/articles/article/${article_id}`} className="article-link">
           <h3 className="title">{title}</h3>
           <p className="article-body">{body}...</p>
         </Link>
-        <div className="votes-and-comments">
+        <div className="votes-and-comments narrow">
           <p>votes: {votes}</p>
           <div className="comments">
             <span className="untoggled material-icons">chat</span>
@@ -41,8 +41,8 @@ export default function ArticleCard({
           </div>
         </div>
         <div className="timestamp">
-          <p>{created_at.match(/^[0-9-]+/)}</p>
-          <p className="time">{created_at.match(/(?<=T)[0-9:]{5}/)}</p>
+          <p className="date">{created_at.match(/^[0-9-]+/)}</p>
+          <p className="time">{created_at.match(/[0-9]{2}:[0-9]{2}/)}</p>
         </div>
       </div>
       <hr className="break" />

@@ -43,7 +43,7 @@ export default function CommentCard({
               <p className="time">
                 {created_at === "just now"
                   ? "just now"
-                  : created_at.match(/(?<=T)[0-9:]+/)}
+                  : created_at.match(/[0-9]{2}:[0-9]{2}/)}
               </p>
             </div>
           </div>
@@ -114,7 +114,7 @@ export default function CommentCard({
           <p className="time">
             {created_at === "just now"
               ? "just now"
-              : created_at.match(/(?<=T)[0-9:]+/)}
+              : created_at.match(/[0-9]{2}:[0-9]{2}/)}
           </p>
         </div>
       </div>
