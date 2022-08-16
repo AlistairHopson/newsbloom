@@ -8,6 +8,13 @@
   text-align: center;
 }
 
+.articles {
+  display: flex;
+  justify-content: center;
+
+
+}
+
 @media (min-width: 768px) {
  
 
@@ -16,9 +23,9 @@
    padding-left: 100px;
  }
 
- p {
+ /* p {
    text-align: justify;
- }
+ } */
 
  .topic-and-author {
    padding-right: 20px;
@@ -29,10 +36,10 @@
    align-items: space-around;
 }
 
-.title {
+/* .title {
    width: 485px;
    padding-right: 20px;
-}
+} */
 
 .filters {
   display: flex
@@ -40,5 +47,12 @@
 
     }
 
+   @media (min-width: 1024px) {
+    .title {
+      width: 485px;
+      padding-right: 20px;
+   }
+   }
 
 
+    

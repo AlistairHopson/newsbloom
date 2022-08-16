@@ -35,11 +35,14 @@ export default function ArticleCard({
         </Link>
         <div className="votes-and-comments">
           <p>votes: {votes}</p>
-          <p>comment_count: {comment_count}</p>
+          <div className="comments">
+            <span className="untoggled material-icons">chat</span>
+            <p>{comment_count}</p>
+          </div>
         </div>
         <div className="timestamp">
           <p>{created_at.match(/^[0-9-]+/)}</p>
-          <p className="time">{created_at.match(/(?<=T)[0-9:]+/)}</p>
+          <p className="time">{created_at.match(/(?<=T)[0-9:]{5}/)}</p>
         </div>
       </div>
       <hr className="break" />

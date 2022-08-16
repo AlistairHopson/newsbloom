@@ -78,6 +78,7 @@ button {
 
 hr {
     color: rgb(144, 144, 144);
+    width: 100%;
 }
 
 .author-and-created-at {

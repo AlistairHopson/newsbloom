@@ -1,9 +1,15 @@
-#filter-box {
+#filter-box .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 228, 196, 0.707);
     height: 35px;
+}
+
+#filter-box {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 228, 196, 0.707);
+
 }
 
 #filter-title {
@@ -32,7 +38,7 @@
 
 
 @media (min-width: 768px) {
- #filter-box {
+ #filter-box .container {
     justify-content: flex-start;
     padding-left: 20px
  }
