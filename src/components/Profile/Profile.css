@@ -13,6 +13,7 @@ u {
 
 h2 {
     text-align: center;
+    margin-right: 150px;
 }
 
 
@@ -20,10 +21,13 @@ h2 {
 .accounts {
     display: flex;
     flex-direction: column;
+    align-content: center;
 }
 
 .account-details{
     display: flex;
+    flex-direction: column;
+
     align-items: center;
     justify-content: center;
     color: black

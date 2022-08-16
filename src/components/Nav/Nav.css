@@ -29,10 +29,27 @@ a:visited {
 
 }
 
-Nav {
+Nav .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
   
-    padding-right: 20px;
+}
+
+.container {
+    width: 100%;
+
+}
+
+@media(min-width: 1200px) {
+    .container {
+        width: 1024px;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+    }
+
+
 }

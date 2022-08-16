@@ -77,45 +77,47 @@ export default function Filters() {
 
   return (
     <div id="filter-box">
-      <label>
-        <select
-          value={selectedTopic === undefined ? "All" : selectedTopic}
-          onChange={updateTopic}
-          id="filter-topic"
-        >
-          <option key="all" value="All">
-            Filter topic
-          </option>
-          {topicOptions.map(({ slug }) => {
-            return (
-              <option key={slug} value={slug}>
-                {slug}
-              </option>
-            );
-          })}
-        </select>
-      </label>
-      <label>
-        <select
-          value={selectedSortMethod === null ? "date" : selectedSortMethod}
-          onChange={updateSorting}
-          id="sort-by"
-        >
-          <option value="date">sort by: date</option>
-          <option value="comment_count">sort by: comments</option>
-          <option value="votes">sort by: votes</option>
-        </select>
-      </label>
-      <label>
-        <select
-          value={selectedOrderMethod === null ? "desc" : selectedOrderMethod}
-          onChange={updateOrdering}
-          id="order"
-        >
-          <option value="desc">descending</option>
-          <option value="asc">ascending</option>
-        </select>
-      </label>
+      <div className="container">
+        <label>
+          <select
+            value={selectedTopic === undefined ? "All" : selectedTopic}
+            onChange={updateTopic}
+            id="filter-topic"
+          >
+            <option key="all" value="All">
+              Filter topic
+            </option>
+            {topicOptions.map(({ slug }) => {
+              return (
+                <option key={slug} value={slug}>
+                  {slug}
+                </option>
+              );
+            })}
+          </select>
+        </label>
+        <label>
+          <select
+            value={selectedSortMethod === null ? "date" : selectedSortMethod}
+            onChange={updateSorting}
+            id="sort-by"
+          >
+            <option value="date">sort by: date</option>
+            <option value="comment_count">sort by: comments</option>
+            <option value="votes">sort by: votes</option>
+          </select>
+        </label>
+        <label>
+          <select
+            value={selectedOrderMethod === null ? "desc" : selectedOrderMethod}
+            onChange={updateOrdering}
+            id="order"
+          >
+            <option value="desc">descending</option>
+            <option value="asc">ascending</option>
+          </select>
+        </label>
+      </div>
     </div>
   );
 }

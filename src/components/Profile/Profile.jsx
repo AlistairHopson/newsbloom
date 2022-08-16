@@ -31,6 +31,7 @@ export default function () {
             <h3>Peter Messy</h3>
           </div>
         </Link>
+        <br />
         <Link
           to="/profile"
           onClick={() =>
@@ -43,7 +44,11 @@ export default function () {
           }
         >
           <div className="account-details">
-            <span class="material-icons md-48">person_2</span>
+            <img
+              height="127.59px"
+              className="styled-profile"
+              src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+            />
             <h3>Guest</h3>
           </div>
         </Link>

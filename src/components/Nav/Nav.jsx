@@ -5,14 +5,16 @@ import { NavLink } from "react-router-dom";
 export default function Nav() {
   return (
     <nav>
-      <header>
-        <NavLink to="/articles">
-          <h1 className="homeHeader">Newsbloom</h1>
+      <div className="container">
+        <header>
+          <NavLink to="/articles">
+            <h1 className="homeHeader">Newsbloom</h1>
+          </NavLink>
+        </header>
+        <NavLink to="/profile">
+          <span className="material-icons md-48">account_circle</span>
         </NavLink>
-      </header>
-      <NavLink to="/profile">
-        <span className="material-icons md-48">account_circle</span>
-      </NavLink>
+      </div>
     </nav>
   );
 }

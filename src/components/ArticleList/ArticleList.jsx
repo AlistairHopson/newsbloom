@@ -40,7 +40,6 @@ export default function ArticleList() {
     return (
       <>
         <Filters />
-        <h2>Articles:</h2>
         <div className="loader"></div>
       </>
     );
@@ -60,39 +59,40 @@ export default function ArticleList() {
   }
 
   return (
-    <>
+    <div className="article-list">
       <Filters />
-      <h2>Articles:</h2>
       <section className="articles">
-        {articles.map(
-          ({
-            title,
-            topic,
-            body,
-            author,
-            votes,
-            comment_count,
-            article_id,
-            date,
-            created_at,
-          }) => {
-            return (
-              <ArticleCard
-                key={article_id}
-                article_id={article_id}
-                topic={topic}
-                title={title}
-                body={body.substring(0, 180)}
-                author={author}
-                votes={votes}
-                comment_count={comment_count}
-                date={date}
-                created_at={created_at}
-              />
-            );
-          }
-        )}
+        <div className="container">
+          {articles.map(
+            ({
+              title,
+              topic,
+              body,
+              author,
+              votes,
+              comment_count,
+              article_id,
+              date,
+              created_at,
+            }) => {
+              return (
+                <ArticleCard
+                  key={article_id}
+                  article_id={article_id}
+                  topic={topic}
+                  title={title}
+                  body={body.substring(0, 180)}
+                  author={author}
+                  votes={votes}
+                  comment_count={comment_count}
+                  date={date}
+                  created_at={created_at}
+                />
+              );
+            }
+          )}
+        </div>
       </section>
-    </>
+    </div>
   );
 }
