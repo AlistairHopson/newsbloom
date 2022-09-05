@@ -1,46 +1,44 @@
 #filter-box .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
 }
 
 #filter-box {
-    display: flex;
-    justify-content: center;
-    background-color: rgba(255, 228, 196, 0.707);
-
+  display: flex;
+  justify-content: center;
+  background-color: rgba(255, 228, 196, 0.707);
+  opacity: 0.75;
 }
 
 #filter-title {
-    padding-right: 10px;
+  padding-right: 10px;
 }
 
 #filter-topic {
-    padding-left: 2px;
-    padding-right: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 #sort-by {
-    padding-left: 2px;
-    padding-right: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
 
-    margin-left: 5px;
-}   
-
-#order {
-    padding-left: 2px;
-    padding-right: 2px;
-
-    margin-left: 5px;
-    margin-right: 5px;
+  margin-left: 5px;
 }
 
+#order {
+  padding-left: 2px;
+  padding-right: 2px;
+
+  margin-left: 5px;
+  margin-right: 5px;
+}
 
 @media (min-width: 768px) {
- #filter-box .container {
+  #filter-box .container {
     justify-content: flex-start;
-    padding-left: 20px
- }
-
+    padding-left: 20px;
+  }
 }

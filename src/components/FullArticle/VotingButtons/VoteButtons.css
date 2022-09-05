@@ -1,81 +1,77 @@
 button {
-    cursor:'pointer' 
+  cursor: "pointer";
 }
 .downvote:active {
-    transform: translateY(4px);
-  }
+  transform: translateY(4px);
+}
 
-  .upvote:active {
-    transform: translateY(-4px);
-  }
+.upvote:active {
+  transform: translateY(-4px);
+}
 
-  .downvote-selected:active {
-    transform: translateY(4px);
-  }
+.downvote-selected:active {
+  transform: translateY(4px);
+}
 
-  .upvote-selected:active {
-    transform: translateY(-4px);
-  }
+.upvote-selected:active {
+  transform: translateY(-4px);
+}
 
 .votes-field {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .downvote {
-    padding: 5px;
-    text-align: center;
-    opacity: 0.4;
-    border: none;
-    background: none;
-    display: flex;
-    padding-top: 10px;
-    align-self: center;
-    }
-    
-    .downvote:hover {
-        color: red;
-    }
-
-.downvote-selected {
-    padding: 5px;
-    text-align: center;
-    opacity: 0.4;
-    border: none;
-    background: none;
-    display: flex;
-    padding-top: 10px;
-    align-self: center;
-    color: red;
+  padding: 5px;
+  text-align: center;
+  opacity: 0.4;
+  border: none;
+  background: none;
+  display: flex;
+  padding-top: 10px;
+  align-self: center;
 }
 
+.downvote:hover {
+  color: red;
+}
+
+.downvote-selected {
+  padding: 5px;
+  text-align: center;
+  opacity: 0.4;
+  border: none;
+  background: none;
+  display: flex;
+  padding-top: 10px;
+  align-self: center;
+  color: red;
+}
 
 .upvote {
-        padding: 5px;
-        text-align: center;
-        opacity: 0.4;
-        border: none;
-        background: none;
-        display: flex;
+  padding: 5px;
+  text-align: center;
+  opacity: 0.4;
+  border: none;
+  background: none;
+  display: flex;
 
-        align-self: center;    
-    }
-    
-    .upvote:hover {
-        color: green;
-    }
+  align-self: center;
+}
 
+.upvote:hover {
+  color: green;
+}
 
-    .upvote-selected {
-        padding: 5px;
-        text-align: center;
-        opacity: 0.4;
-        border: none;
-        background: none;
-        display: flex;
-        align-self: center;
-        color: green;
-    }
-
-
+.upvote-selected {
+  padding: 5px;
+  text-align: center;
+  opacity: 0.4;
+  border: none;
+  background: none;
+  display: flex;
+  align-self: center;
+  color: green;
+}

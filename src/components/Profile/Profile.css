@@ -10,6 +10,8 @@ u {
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: fadeIn;
+  animation-duration: 0.5s;
 }
 
 h2 {
