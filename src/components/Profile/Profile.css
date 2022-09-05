@@ -1,60 +1,68 @@
 button {
-cursor: pointer;}
+  cursor: pointer;
+}
 
 u {
-    text-decoration:dashed;
-  }
+  text-decoration: dashed;
+}
 
 .account-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h2 {
-    text-align: center;
-    margin-right: 150px;
+  text-align: center;
+  margin-right: 150px;
 }
-
-
 
 .accounts {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.account-header {
+  margin: 20px 0 10px 0;
+  padding: 0;
 }
 
-.account-details{
-    display: flex;
-    flex-direction: column;
+.account-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
 
-    align-items: center;
-    justify-content: center;
-    color: black
+.account-details.desaturated {
+  -webkit-filter: saturate(20%);
+  transition: all 0.3s ease-in-out;
+}
 
+.account-details.desaturated:hover {
+  -webkit-filter: saturate(70%);
+  transform: scale(1.05);
 }
 
 .styled-profile {
-    width: 150px;
-    border: 5px dotted #555;
-    margin-right: 15px;
-
+  width: 150px;
+  border: 5px dotted #555;
+  margin-right: 15px;
 }
 
 .log-out {
-    display: flex;
-    justify-content: center;
-    background-color: rgba(139, 0, 0, 0.533);
-    width: 80px;
-                height: 25px;
-                border-radius: 20px;
-                margin-top: 20px;
-                font-weight: bold;
-
-            }
+  display: flex;
+  justify-content: center;
+  background-color: rgba(139, 0, 0, 0.533);
+  width: 80px;
+  height: 25px;
+  border-radius: 20px;
+  margin-top: 20px;
+  font-weight: bold;
+}
 
 .log-out:hover {
-    background-color: rgba(139, 0, 0, 0.846);
-    color: aliceblue;
-
+  background-color: rgba(139, 0, 0, 0.846);
+  color: aliceblue;
 }
