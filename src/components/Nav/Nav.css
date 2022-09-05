@@ -18,13 +18,18 @@ a:visited {
   text-decoration: none;
 }
 
-.homeHeader {
+.home-header {
   font-family: "Averia Serif Libre", Helvetica, sans-serif;
   font-size: 35px;
   color: black;
   padding-left: 20px;
   text-decoration: overline underline rgb(7, 83, 2) 5px;
   text-underline-offset: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+.home-header:hover {
+  transform: scale(1.1);
 }
 
 .nav-account {
@@ -34,6 +39,11 @@ a:visited {
   text-decoration-color: rgba(255, 114, 250, 0.684);
   text-decoration-style: dotted;
   font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-account:hover {
+  transform: scale(1.1);
 }
 
 .nav-account.guest {

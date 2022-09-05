@@ -1,11 +1,10 @@
 # Newsbloom
 
 View Newsbloom: https://newsbloom.netlify.app
-(Chrome recommended. You can view Newsbloom's mobile-first design by using Chrome DevTools)
 
 ## Overview
 
-Newsbloom is an application that serves news data in a similar manner to websites such as Reddit. It serves articles and user data to clients, and allows interaction through votes and comments.
+Newsbloom is an mobile-first application that serves news data in a similar manner to websites such as Reddit. It serves articles and user data to clients, and allows interaction through votes and comments.
 
 This repository contains the frontend Newsbloom development. To see the backend repository, visit https://github.com/AlistairHopson/newsbloom-api
 

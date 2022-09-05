@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Niramit:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Niramit:wght@700&display=swap");
 
 .no-resource-error {
   display: flex;
@@ -11,48 +11,41 @@
 .articles {
   display: flex;
   justify-content: center;
-
-
+  animation: fadeIn;
+  animation-duration: 0.3s;
 }
 
 @media (min-width: 768px) {
- 
+  h2 {
+    padding-left: 100px;
+  }
 
-
- h2 {
-   padding-left: 100px;
- }
-
- /* p {
+  /* p {
    text-align: justify;
  } */
 
- .topic-and-author {
-   padding-right: 20px;
-}
+  .topic-and-author {
+    padding-right: 20px;
+  }
 
-.votes-and-comments {
-   display: flex;
-   align-items: space-around;
-}
+  .votes-and-comments {
+    display: flex;
+    align-items: space-around;
+  }
 
-/* .title {
+  /* .title {
    width: 485px;
    padding-right: 20px;
 } */
 
-.filters {
-  display: flex
+  .filters {
+    display: flex;
+  }
 }
 
-    }
-
-   @media (min-width: 1024px) {
-    .title {
-      width: 485px;
-      padding-right: 20px;
-   }
-   }
-
-
-    
+@media (min-width: 1024px) {
+  .title {
+    width: 485px;
+    padding-right: 20px;
+  }
+}

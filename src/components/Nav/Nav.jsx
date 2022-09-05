@@ -13,7 +13,7 @@ export default function Nav() {
       <div className="container">
         <header>
           <NavLink to="/articles">
-            <h1 className="homeHeader">Newsbloom</h1>
+            <h1 className="home-header">Newsbloom</h1>
           </NavLink>
         </header>
         <NavLink
