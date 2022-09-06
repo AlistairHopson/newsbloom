@@ -2,11 +2,16 @@
 
 nav {
   background-color: rgba(227, 227, 227, 0.641);
+  box-shadow: rgb(0 0 0 / 0%) 0px 54px 55px, rgb(0 0 0 / 0%) 0px -12px 30px,
+    rgb(0 0 0) 0px 2px 6px, rgb(0 0 0 / 21%) 0px 6px 40px,
+    rgb(0 0 0 / 0%) 0px -3px 5px;
 }
 
 .material-icons.md-48 {
   font-size: 48px;
   position: static;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0.508);
 }
 
 a {
@@ -20,12 +25,16 @@ a:visited {
 
 .home-header {
   font-family: "Averia Serif Libre", Helvetica, sans-serif;
-  font-size: 35px;
-  color: black;
+  font-size: 45px;
+
   padding-left: 20px;
   text-decoration: overline underline rgb(7, 83, 2) 5px;
   text-underline-offset: 4px;
   transition: all 0.3s ease-in-out;
+
+  color: rgb(0, 0, 0);
+  -webkit-text-stroke-color: rgba(7, 83, 2, 0.275);
+  -webkit-text-stroke-width: 1px;
 }
 
 .home-header:hover {
@@ -43,7 +52,7 @@ a:visited {
 }
 
 .nav-account:hover {
-  transform: scale(1.1);
+  transform: scale(1.02);
 }
 
 .nav-account.guest {
@@ -53,6 +62,8 @@ a:visited {
 
 .nav-username {
   margin: 0;
+  -webkit-text-stroke-width: 0.2px;
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0.508);
 }
 
 Nav .container {
@@ -63,6 +74,12 @@ Nav .container {
 
 .container {
   width: 100%;
+}
+
+@media (min-width: 375px) {
+  .nav-account {
+    padding-right: 15px;
+  }
 }
 
 @media (min-width: 1200px) {
