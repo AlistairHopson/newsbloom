@@ -36,6 +36,8 @@ button {
 
 .downvote:hover {
   color: red;
+  animation: tada;
+  animation-duration: 1s;
 }
 
 .downvote-selected {
@@ -48,6 +50,8 @@ button {
   padding-top: 10px;
   align-self: center;
   color: red;
+  animation: bounceOutDown;
+  animation-duration: 0.6s;
 }
 
 .upvote {
@@ -63,6 +67,8 @@ button {
 
 .upvote:hover {
   color: green;
+  animation: tada;
+  animation-duration: 1s;
 }
 
 .upvote-selected {
@@ -74,4 +80,6 @@ button {
   display: flex;
   align-self: center;
   color: green;
+  animation: bounceOutUp;
+  animation-duration: 1s;
 }

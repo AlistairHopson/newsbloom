@@ -69,7 +69,7 @@ export default function CommentCard({
           )}
         </div>
         <div className="confirm-delete-message">
-          <p>
+          <p className={commentDeleted ? "comment-deleted" : null}>
             <strong>
               {commentDeleted
                 ? "Comment deleted"
@@ -106,7 +106,9 @@ export default function CommentCard({
   }
 
   return (
-    <div className="comment">
+    <div
+      className={created_at !== "just now" ? "comment" : "comment just-added"}
+    >
       <div className="author-and-created-at">
         <p>{author}</p>
         <div className="date-and-time">

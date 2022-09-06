@@ -30,7 +30,7 @@ export default function FullArticle() {
     getArticleById(article_id)
       .then(({ article }) => {
         setArticle(article);
-        if (document.readyState == "complete") {
+        if (document.readyState === "complete") {
           setIsLoading(false);
         }
       })

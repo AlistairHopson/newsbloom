@@ -8,8 +8,11 @@
 #filter-box {
   display: flex;
   justify-content: center;
-  background-color: rgba(255, 228, 196, 0.707);
-  opacity: 0.75;
+  background-color: rgba(255, 228, 196, 1);
+  /* opacity: 0.75; */
+  box-shadow: rgb(0 0 0 / 0%) 0px 54px 55px, rgb(0 0 0 / 0%) 0px -12px 30px,
+    rgb(0 0 0) 0px 2px 6px, rgb(0 0 0 / 21%) 0px 6px 40px,
+    rgb(0 0 0 / 0%) 0px -3px 5px;
 }
 
 #filter-title {

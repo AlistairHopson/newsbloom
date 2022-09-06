@@ -15,6 +15,13 @@
   animation-duration: 0.3s;
 }
 
+.articles .container {
+  padding: 30px;
+  box-shadow: rgb(0 0 0 / 27%) 0px 54px 55px, rgb(0 0 0 / 12%) 0px 12px 30px,
+    rgb(0 0 0 / 12%) 0px 4px 6px, rgb(0 0 0 / 17%) 0px 12px 13px,
+    rgb(0 0 0 / 9%) 0px 3px 5px;
+}
+
 @media (min-width: 768px) {
   h2 {
     padding-left: 100px;
